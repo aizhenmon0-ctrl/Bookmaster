@@ -5,8 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Bookmaster.View.Windows"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Bookmaster3000" MinHeight="720" MinWidth="1280" Height="1080" Width="1920" WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <!-- Колекция строк RowDefinitions-->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+        <!-- Меню -->
+        <Menu>
+           <MenuItem Header="Файл">
+                <MenuItem Name="LoginMi"  Header="Вход в систему" Click="LoginMi_Click"/>
+                <MenuItem Name="LogoutMi" Header="Выход из системы"  Visibility="Hidden" Click="LogoutMi_Click"/>
+                <MenuItem Name="CloseMi" Header="Закрыть приложение" Click="CloseMi_Click"/>
+          </MenuItem>
+            <!--Meню-->
+            <MenuItem Name="LibraryMi" Header="Библиотека"
+                      Visibility="Collapsed">
+                <MenuItem Name="BrowsCatztlogMi"  Header="Просмотр каталога" Click="BrowsCatztlogMi_Click"/>
+                <MenuItem Name="ManageCustomersMi" Header="Управление читателями" Click="ManageCustomersMi_Click"/>
+                <MenuItem Name="CirculationMi" Header="Управление абонентом" Click="CirculationMi_Click"/>
+                <MenuItem Name="RepostMi" Header="Отчеты" Click="RepostMi_Click"/>
+                
+                <!--Просмотр каталога-->
+                <!--Управление читателями-->
+                <!--Управление абонентом-->
+                <!--Отчёты-->
+            </MenuItem>
+       </Menu>
     </Grid>
 </Window>
+    
